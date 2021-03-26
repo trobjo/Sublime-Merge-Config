@@ -1,0 +1,170 @@
+[
+
+// { "keys": ["h"], "command": "set_setting", "args":
+//   {
+//     "setting": "block_caret", "value": false
+//   }, "context":
+//   [
+//     { "key": "setting.block_caret", "operator": "equal", "operand": true },
+//   ]
+// },
+
+
+
+  { "keys": ["s"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true }, "context":
+[
+  { "key": "setting.block_caret", "operator": "equal", "operand": true }
+]
+},
+
+
+
+{ "keys": ["."], "command": "move", "args": {"by": "lines", "forward": false}, "context":
+[
+  { "key": "setting.block_caret", "operator": "equal", "operand": true }
+
+] },
+{ "keys": ["e"], "command": "move", "args": {"by": "lines", "forward": true}, "context":
+[
+  { "key": "setting.block_caret", "operator": "equal", "operand": true }
+
+] },
+
+
+
+
+{"keys": ["j"], "command": "copy" , "context":
+  [
+    {"key": "setting.block_caret"},
+  ]
+},
+
+
+
+// {"keys": ["ctrl+g"], "command": "delete_word", "args": { "forward": false }, "context":
+// [
+//   {"key": "setting.block_caret", "operator": "equal", "operand": false },
+// ]
+// },
+
+// {"keys": ["ctrl+c"], "command": "delete_word", "args": { "forward": true }, "context":
+// [
+//   {"key": "setting.block_caret", "operator": "equal", "operand": false },
+// ]
+// },
+
+// // {"keys": ["ctrl+,"], "command": "move", "args": {"by": "stops", "word_begin": true, "punct_begin": true, "forward": false}, "context":
+// // [
+// //   {"key": "setting.block_caret", "operator": "equal", "operand": false },
+// // ]
+// // },
+// //
+
+// {"keys": ["ctrl+p"], "command": "move", "args": {"by": "stops", "word_begin": true, "punct_begin": true, "forward": true}, "context":
+// [
+//   {"key": "setting.block_caret", "operator": "equal", "operand": false },
+// ]
+// },
+
+
+
+
+
+    { "keys": ["ctrl+escape"], "command": "toggle_side_bar", "context":
+        [
+  { "key": "overlay_visible", "operator": "equal", "operand": false },
+        ]
+     },
+
+
+
+  //    {
+  //       "keys": ["escape"],
+  //       "command": "exit_file_view",
+  //       "context":
+  //       [
+  //           { "key": "viewing_file" },
+  //           { "key": "blame_mode", "operator": "not_equal" },
+  //           { "key": "merge_mode", "operator": "not_equal" },
+  //       ]
+  //    },
+
+
+    { "keys": ["ctrl+w"], "command": "close" },
+
+
+     { "keys": ["alt"], "command": "noop"},
+
+
+
+     { "keys": ["ctrl+o"], "command": "navigate_back" },
+     { "keys": ["ctrl+u"], "command": "navigate_forward" },
+     { "keys": ["ctrl+e"], "command": "navigate_to_parent" },
+     { "keys": ["ctrl+."], "command": "navigate_to_child" },
+
+
+     { "keys": ["alt+1"], "command": "focus_left", "context": [{"key": "merge_mode"}] },
+     { "keys": ["alt+2"], "command": "focus_middle", "context": [{"key": "merge_mode"}] },
+     { "keys": ["alt+3"], "command": "focus_right", "context": [{"key": "merge_mode"}] },
+
+     // { "keys": ["ctrl+enter"], "command": "edit_commit",
+     //    "context": [{ "key": "setting.commit_message" }, { "key": "read_only" }]
+     // },
+
+
+
+// { "keys": ["escape"], "command": "set_setting", "args":
+//   {
+//     "setting": "block_caret", "value": true
+//   }, "context": [
+//     // { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+//     // { "key": "overlay_visible", "operator": "equal", "operand": false },
+//     // { "key": "panel_has_focus", "operator": "equal", "operand": false },
+//     // { "key": "popup_visible", "operator": "equal", "operand": false },
+//     { "key": "setting.block_caret", "operator": "equal", "operand": false }
+//   ]
+// },
+
+// { "keys": ["escape"], "command": "set_setting", "args":
+//   {
+//     "setting": "block_caret", "value": true
+//   }, "context": [
+//     // { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+//     // { "key": "overlay_visible", "operator": "equal", "operand": false },
+//     // { "key": "panel_has_focus", "operator": "equal", "operand": false },
+//     // { "key": "popup_visible", "operator": "equal", "operand": false },
+//     { "key": "setting.block_caret", "operator": "equal", "operand": false }
+//   ]
+// },
+
+
+
+// { "keys": ["enter"], "command": "insert", "args": {"characters": "\n"}, "context":
+// [
+//   // {"key": "selector", "operator": "equal", "operand": "text"},
+//   { "key": "setting.block_caret", "operator": "equal", "operand": false }
+// ]
+// },
+
+// {
+//     "keys": ["s"],
+//     "command": "stage_hunk",
+//     "context": [
+//         // {"key": "is_staged", "operand": false },
+//         {"key": "is_diff", "operator": "not_equal"},
+//         {"key": "control", "operator": "equal", "operand": "text_control"},
+//         { "key": "setting.block_caret", "operator": "equal", "operand": true },
+//     ],
+// },
+
+// { "keys": ["enter"], "command": "stage_hunk", "context":
+// [
+//   { "key": "setting.block_caret", "operator": "equal", "operand": true }
+// ]
+// },
+
+
+
+
+
+]
